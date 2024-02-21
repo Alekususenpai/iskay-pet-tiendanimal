@@ -1,12 +1,14 @@
-import Header from './components/layout/Header'
 import Navigation from './pages/Navigation'
+import Footer from './components/layout/Footer'
 
 function App() {
 
   return (
     <>
-      <Header />
-      <Navigation />
+      <div className='min-h-screen'>
+        <Navigation />
+      </div>
+      <Footer />
     </>
   )
 }

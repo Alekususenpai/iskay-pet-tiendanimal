@@ -15,6 +15,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 2px; /* Adjust the width of the scrollbar */
+}
+
+
 /* a {
   font-weight: 500;
   color: #646cff;

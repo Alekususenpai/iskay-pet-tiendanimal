@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      textUnderlineOffset: {
+        8: '12px',
+      }
+    },
   },
   plugins: [],
 }

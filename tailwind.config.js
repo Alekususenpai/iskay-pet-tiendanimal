@@ -5,8 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+    extend: {
+      colors: {
+        'primary': '#639605',
+        },
+        textUnderlineOffset: {
+          8: '12px',
+        }
+      },
+    },
+    plugins: [],
+  }
 

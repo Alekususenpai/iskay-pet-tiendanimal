@@ -6,11 +6,14 @@ export default {
   ],
   theme: {
     extend: {
-      textUnderlineOffset: {
-        8: '12px',
-      }
+      colors: {
+        'primary': '#639605',
+        },
+        textUnderlineOffset: {
+          8: '12px',
+        }
+      },
     },
-  },
-  plugins: [],
-}
+    plugins: [],
+  }
 

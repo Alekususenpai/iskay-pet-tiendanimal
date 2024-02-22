@@ -7,8 +7,8 @@ import cartIcon from '../../assets/Cart.svg';
 
 function Header() {
 
-  const activeStyle = 'text-green-500 underline underline-offset-8 decoration-4';
-  const inactiveStyle = 'text-gray-600 hover:text-green-500';
+  const activeStyle = 'text-primary underline underline-offset-8 decoration-4';
+  const inactiveStyle = 'text-gray-600 hover:text-primary';
 
   return (
     <header className="bg-white">

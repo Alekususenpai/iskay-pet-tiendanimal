@@ -8,12 +8,13 @@ export default {
     extend: {
       colors: {
         'primary': '#639605',
-        },
-        textUnderlineOffset: {
-          8: '12px',
-        }
+        'primary-dark': '#486C05',
       },
+      textUnderlineOffset: {
+        8: '12px',
+      }
     },
-    plugins: [],
-  }
+  },
+  plugins: [],
+}
 

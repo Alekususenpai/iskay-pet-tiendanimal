@@ -11,7 +11,7 @@ function Navigation() {
           return (
                     <Router>
                               <Header />
-                              <div className='my-8 mx-4'>
+                              <div className='my-11 mx-4'>
                                         <Routes>
                                                   <Route path="/" element={<Home />} />
                                                   <Route path="/perfil" element={<Profile />} />

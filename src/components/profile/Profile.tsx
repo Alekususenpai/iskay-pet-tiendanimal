@@ -2,9 +2,9 @@ import React from 'react'
 
 function Profile() {
           return (
-                    <div className="max-w-sm mx-auto">
-                              <h2 className="text-xl font-semibold mb-6">Mis datos</h2>
-                              <div className="px-5 py-9 bg-white rounded shadow-lg">
+                    <div className="section-wrapper">
+                              <h2 className="section-heading">Mis datos</h2>
+                              <div className="form-wrapper">
                                         <form>
                                                   <div className="mb-4">
                                                             <label htmlFor="name" className="block font-medium mb-2">Nombre *</label>

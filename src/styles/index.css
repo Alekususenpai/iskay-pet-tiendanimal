@@ -8,18 +8,28 @@
   font-weight: 700;
   color-scheme: light dark;
   color: rgba(85, 85, 85, 1);
-  background-color: rgba(178, 178, 178, .18);
+  background-color: rgba(206, 205, 205, 0.2);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 .custom-scrollbar::-webkit-scrollbar {
   width: 2px; /* Adjust the width of the scrollbar */
 }
 
+@layer components {
+  .section-heading {
+    @apply text-xl font-semibold mb-6;
+  }
+  .section-wrapper {
+    @apply max-w-md mx-auto;
+  }
+  .form-wrapper {
+    @apply px-5 py-9 bg-white rounded shadow-lg;
+  }
+}
 
 /* a {
   font-weight: 500;

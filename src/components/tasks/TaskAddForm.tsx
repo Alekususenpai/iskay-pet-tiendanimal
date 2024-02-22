@@ -33,6 +33,7 @@ function TaskAddForm({ onClose }: { onClose: () => void }) {
                                                                       completed: false,
                                                             };
                                                             dispatch(addTaskAsync(taskData));
+                                                            setSubmitting(false);
                                                             onClose();
                                                   }}
                                         >

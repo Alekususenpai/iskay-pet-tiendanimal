@@ -26,15 +26,23 @@ function TaskAddForm({ onClose }: { onClose: () => void }) {
                                         <Formik
                                                   initialValues={{ userId: '', title: '' }}
                                                   validationSchema={TaskSchema}
-                                                  onSubmit={(values, { setSubmitting }) => {
+                                                  onSubmit={(values, { setSubmitting, setErrors }) => {
                                                             const taskData = {
                                                                       ...values,
                                                                       id: Date.now(),
                                                                       completed: false,
                                                             };
-                                                            dispatch(addTaskAsync(taskData));
-                                                            setSubmitting(false);
-                                                            onClose();
+                                                            dispatch(addTaskAsync(taskData))
+                                                                      .unwrap()
+                                                                      .then(() => {
+                                                                                onClose();
+                                                                      })
+                                                                      .catch((error) => {
+                                                                                setErrors({ submit: error });
+                                                                      })
+                                                                      .finally(() => {
+                                                                                setSubmitting(false);
+                                                                      });
                                                   }}
                                         >
                                                   {({ errors, touched }) => (
@@ -50,7 +58,7 @@ function TaskAddForm({ onClose }: { onClose: () => void }) {
                                                                                 <Field name="title" as="textarea" rows={6} className="w-full py-1.5 px-4 border border-gray-400 rounded-md placeholder-gray-400 placeholder:text-sm  font-thin" />
                                                                                 {errors.title && touched.title ? <div className="text-red-500 text-xs font-thin p-2">{errors.title} *</div> : null}
                                                                       </div>
-
+                                                                      {errors.submit && <div className="text-red-500 text-xs font-thin p-2">{errors.submit}</div>}
                                                                       <div className='flex justify-between content-center mt-5'>
                                                                                 <button type="button" onClick={onClose} className="w-full font-normal tracking-wide text-gray-400">Cancelar</button>
                                                                                 <button type="submit" className="w-full px-3 py-2 bg-primary text-white rounded-md hover:bg-primary-dark font-normal tracking-wide">Guardar</button>

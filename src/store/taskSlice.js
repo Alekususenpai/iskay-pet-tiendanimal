@@ -8,12 +8,16 @@ export const fetchTasksAsync = createAsyncThunk('tasks/fetchTasks', async () => 
 
 export const addTaskAsync = createAsyncThunk(
   'tasks/addTask',
-  async (taskData, { getState }) => {
-    const newTask = {
-      ...taskData,
-      id: Date.now()
-    };
-    return newTask;
+  async (taskData, { rejectWithValue }) => {
+    try {
+      const newTask = {
+        ...taskData,
+        id: Date.now()
+      };
+      return newTask;
+    } catch (error) {
+      return rejectWithValue('La tarea no se pudo agregar. Intente nuevamente.');
+    }
   }
 );
 
@@ -47,12 +51,18 @@ const taskSlice = createSlice({
         state.loading = 'rejected';
       })
       .addCase(addTaskAsync.fulfilled, (state, action) => {
-        state.entities.push(action.payload); 
+        state.entities.push(action.payload);
+      })
+      .addCase(addTaskAsync.rejected, (state) => {
+        state.loading = 'rejected';
       })
       .addCase(deleteTaskAsync.fulfilled, (state, action) => {
         state.entities = state.entities.filter(task => task.id !== action.payload);
+      })
+      .addCase(deleteTaskAsync.rejected, (state) => {
+        state.loading = 'rejected';
       });
-},
+  },
 });
 
 export default taskSlice.reducer;

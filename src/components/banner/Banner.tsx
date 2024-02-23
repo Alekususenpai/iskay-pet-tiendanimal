@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import companyLogoBig from '../../assets/CompanyLogoBig.png';
 
 const Banner = () => {

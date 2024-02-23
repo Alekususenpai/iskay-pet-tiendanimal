@@ -1,9 +1,9 @@
-import React from 'react'
 import { useDispatch } from 'react-redux';
 import { deleteTaskAsync } from '../../store/taskSlice';
 import trashIcon from '../../assets/Trash.svg'
+import { Task } from '../../types/taskApiType';
 
-function TaskItem({ task }) {
+function TaskItem({ task }: { task: Task }) {
 
           const dispatch = useDispatch();
 

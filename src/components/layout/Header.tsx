@@ -15,8 +15,8 @@ function Header() {
       <div className="flex justify-between items-center p-4 md:px-8 border border-bottom">
         <img src={menuIcon} alt="Menu" className="h-6 w-6 md:order-1" />
         <img src={searchIcon} alt="Search" className="h-6 w-6 md:mr-6 md:order-3" />
-        <Link to="/" className="md:order-2 md:flex md:justify-center md:w-full">
-          <img src={logo} alt="Tiendanimal" className="h-7" />
+        <Link to="/" className="md:order-2 md:flex md:justify-center md:w-full md:ml-24">
+          <img src={logo} alt="Tiendanimal" className="h-7 outline-none" />
         </Link>
         <img src={loginIcon} alt="Login" className="h-6 w-6 md:mr-6 md:order-4" />
         <img src={cartIcon} alt="Cart" className="h-7.5 w-7.5 md:order-5" />

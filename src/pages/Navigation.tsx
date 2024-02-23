@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from '../components/layout/Header'
+import NotFound from '../components/common/NotFound'
 import Profile from '../components/profile/Profile';
 import TaskList from '../components/tasks/TaskList';
 import Returns from '../components/returns/Returns';
@@ -19,6 +20,7 @@ function Navigation() {
                                                   <Route path="/devoluciones" element={<Returns />} />
                                                   <Route path="/comunicaciones" element={<Communications />} />
                                                   <Route path="/mascotas" element={<Pets />} />
+                                                  <Route path="*" element={<NotFound />} />
                                         </Routes>
                               </div>
                     </Router>

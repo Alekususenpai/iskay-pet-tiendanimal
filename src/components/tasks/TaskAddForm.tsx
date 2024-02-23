@@ -48,13 +48,12 @@ function TaskAddForm({ onClose }: { onClose: () => void }) {
                                                             <Form>
                                                                       <div className="mb-4">
                                                                                 <label htmlFor="userId" className="block text-sm font-medium mb-2">Nombre</label>
-                                                                                <Field name="userId" type="text" className="w-full py-1.5 px-4 border border-gray-400 rounded-md placeholder-gray-400 placeholder:text-sm  font-thin" />
+                                                                                <Field name="userId" type="text" className="w-full py-1.5 px-4 border border-gray-400 rounded-md placeholder-gray-400 placeholder:text-sm font-thin" placeholder="Nombre" />
                                                                                 {errors.userId && touched.userId ? (<div className="text-red-500 text-xs font-thin p-2">{errors.userId} *</div>) : null}
                                                                       </div>
-
                                                                       <div className="mb-4">
                                                                                 <label htmlFor="title" className="block text-sm font-medium mb-2">Descripción</label>
-                                                                                <Field name="title" as="textarea" rows={6} className="w-full py-1.5 px-4 border border-gray-400 rounded-md placeholder-gray-400 placeholder:text-sm  font-thin" />
+                                                                                <Field name="title" as="textarea" rows={6} className="w-full py-1.5 px-4 border border-gray-400 rounded-md placeholder-gray-400 placeholder:text-sm  font-thin" placeholder="Descripción" />
                                                                                 {errors.title && touched.title ? <div className="text-red-500 text-xs font-thin p-2">{errors.title} *</div> : null}
                                                                       </div>
                                                                       {errors.submit && <div className="text-red-500 text-xs font-thin p-2">{errors.submit}</div>}

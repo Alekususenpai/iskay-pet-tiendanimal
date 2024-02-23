@@ -4,6 +4,7 @@ import { fetchTasksAsync } from '../../store/taskSlice';
 import TaskItem from './TaskItem'
 import TaskAddForm from './TaskAddForm'
 import ReactPaginate from 'react-paginate';
+import {Task} from "../../types/taskApiType"
 
 function TaskList() {
 
@@ -23,7 +24,7 @@ function TaskList() {
 
   const currentTasks = tasks.slice(currentPage * pageSize, (currentPage + 1) * pageSize);
 
-  const handlePageClick = (event) => {
+  const handlePageClick = (event: { selected: React.SetStateAction<number>; }) => {
     setCurrentPage(event.selected);
   };
 
@@ -48,7 +49,7 @@ function TaskList() {
       {loading === 'pending' && <p>Loading tasks...</p>}
       {loading === 'fulfilled' && currentTasks.length > 0 && (
         <>
-          {currentTasks.map((task) => (
+          {currentTasks.map((task: Task) => (
             <TaskItem task={task} key={task.id} />
           ))}
           <ReactPaginate

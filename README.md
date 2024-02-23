@@ -20,4 +20,31 @@
 </p>
 
 
+## Starting the Project:
+- Clone the repository: git clone https://github.com/Alekususenpai/iskay-pet-tiendanimal.git.
+- Install dependencies: npm install.
+- Start the development server: npm run dev.
+
+
+## Tech Stack:
+- Frontend: React, Redux Toolkit, React Router, Formik, Yup
+- Styling: Tailwind CSS
+- Tooling: Vite, TypeScript, ESLint
+
+
+## Architecture Overview:
+The application follows a modular architecture with components organized by feature. State management is handled with Redux Toolkit, and forms are built using Formik with Yup for validation. Routing is managed with React Router. The project is set up with Vite for fast builds and hot-reloading during development, and TypeScript for type safety.
+
+## Folder structure:
+The folder structure for the project is organized for modularity and ease of navigation:
+- assets: Contains static files like images and icons.
+- components: Includes UI components, further categorized by feature for better encapsulation.
+- pages: Stores page components that represent different routes.
+- store: Holds the Redux store configuration and slices, encapsulating state management.
+- styles: Contains global styles and configurations for the application.
+- types: Type definitions for TypeScript, ensuring type safety across the app.
+- App.tsx: The root component that ties together different parts of the app.
+- main.tsx: The entry point for the application where the root component is rendered.
+
+
 

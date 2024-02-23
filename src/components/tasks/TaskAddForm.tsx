@@ -14,7 +14,7 @@ function TaskAddForm({ onClose }: { onClose: () => void }) {
           const dispatch = useDispatch();
 
           return (
-                    <div className="fixed inset-0 px-4 py-7 bg-gray-600 bg-opacity-70 overflow-y-auto h-full w-full">
+                    <div id="addTask" className="fixed inset-0 px-4 py-7 bg-gray-600 bg-opacity-70 overflow-y-auto h-full w-full">
                               <div className="section-wrapper form-wrapper py-6 md:mt-28">
                                         <div className='flex justify-between'>
                                                   <h2 className='section-heading'>Añadir tarea</h2>

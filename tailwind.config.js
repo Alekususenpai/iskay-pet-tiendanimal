@@ -17,7 +17,10 @@ export default {
       },
       textUnderlineOffset: {
         8: '12px',
-      }
+      },
+      height: {
+        '70vh': '70vh',
+      },
     },
   },
   plugins: [],

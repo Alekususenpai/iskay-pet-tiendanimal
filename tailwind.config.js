@@ -5,7 +5,23 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'primary': '#639605',
+        'primary-dark': '#486C05',
+        'banner-green': '#7AB800',
+        'banner-red': '#CC292B',
+      },
+      fontFamily: {
+        nunito: ['Nunito', 'sans-serif']
+      },
+      textUnderlineOffset: {
+        8: '12px',
+      },
+      height: {
+        '70vh': '70vh',
+      },
+    },
   },
   plugins: [],
 }

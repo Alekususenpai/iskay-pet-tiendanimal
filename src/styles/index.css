@@ -45,3 +45,34 @@
     @apply text-black font-semibold py-2 px-4 rounded;
   }
 }
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  body,
+  header.bg-white,
+  nav,
+  .banner__container,
+  #addTask div {
+    background-color: rgb(11, 1, 79);
+    color: rgba(255, 255, 255, 0.886);
+  }
+
+  .section-wrapper > div,
+  .section-wrapper > div,
+  input,
+  textarea {
+    background-color: rgba(255, 255, 255, 0.555);
+  }
+  .form-wrapper,
+  .section-wrapper > div p,
+  input,
+  .banner__text-container,
+  nav.flex a,
+  div.text-red-500 {
+    color: rgba(255, 255, 255, 0.858);
+  }
+
+  header > div {
+    border: none;
+  }
+}
